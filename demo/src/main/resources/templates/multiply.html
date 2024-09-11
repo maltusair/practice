@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Multiply Number</title>
+</head>
+<body>
+<h1>Умножение числа</h1>
+<form action="/showDetails" method="get">
+  <label for="number">Введите число:</label>
+  <input type="text" id="number" name="number" required>
+  <button type="submit">Умножить</button>
+</form>
+
+<div th:if="${result}">
+  <h2 th:text="${result}"></h2>
+</div>
+
+<div th:if="${error}">
+  <h2 style="color:red;" th:text="${error}"></h2>
+</div>
+</body>
+</html>
+
